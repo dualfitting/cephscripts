@@ -214,16 +214,3 @@ ssh ceph07 rm -rf /var/lib/ceph/mon/ceph-c/*
 ssh ceph07 mkdir -p /var/lib/ceph/mon/ceph-c
 ssh ceph08 rm -rf /var/lib/ceph/mds/ceph-1/*
 
-#for node in ceph01 ceph02 ceph03 ceph04 ceph05 ceph06 ceph07 ceph08 cephclient2 cephclient3
-#do
-#    scp /etc/ceph/ceph.conf $node:/etc/ceph/ceph.conf
-#done;
-
-#mkcephfs -a -c /etc/ceph/ceph.conf -k /etc/ceph/keyring.admin
-
-#for node in ceph01 ceph02 ceph03 ceph04 ceph05 ceph06 ceph07 ceph08 cephclient2 cephclient3
-#do
-#    scp /etc/ceph/keyring.admin $node:/etc/ceph/keyring.admin
-#done;
-
-#service ceph -a restart
